@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tips Mengurangi Efek Rumah Kaca</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🌍 Tips Mengurangi Efek Rumah Kaca</h1>
+
+        <p class="subtitle">
+            Klik salah satu tips untuk melihat penjelasan lengkap.
+        </p>
+
+        {% for tip in tips %}
+        <a href="{{ url_for('detail', index=loop.index0) }}" class="tip">
+
+            <h2>{{ tip.judul }}</h2>
+
+            <p>{{ tip.isi }}</p>
+
+            <span>👉 Klik untuk melihat penjelasan</span>
+
+        </a>
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>
