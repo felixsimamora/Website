@@ -1,0 +1,261 @@
+detail.html
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ tip.judul }}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container detail">
+
+        {% if tip.judul == "Hemat Listrik" %}
+
+            <h1>💡 Hemat Listrik</h1>
+
+            <p class="subtitle">
+                Cara menghemat energi listrik dalam kehidupan sehari-hari.
+            </p>
+
+            <div class="detail-box">
+                <h2>1. Menghilangkan Daya Siluman</h2>
+                <p>
+                    Perangkat elektronik yang tetap terhubung ke aliran listrik
+                    saat mati masih mengonsumsi energi secara konstan. Memutuskan
+                    sambungan secara total mengurangi konsumsi daya pasif harian.
+                </p>
+            </div>
+
+            <div class="detail-box">
+                <h2>2. Efisiensi Konversi Energi Pencahayaan</h2>
+                <p>
+                    Penggunaan teknologi pencahayaan modern meminimalkan energi
+                    yang terbuang menjadi panas dan memaksimalkan energi yang
+                    diubah menjadi cahaya, sehingga menurunkan kebutuhan watt
+                    secara signifikan.
+                </p>
+            </div>
+
+            <div class="detail-box">
+                <h2>3. Optimasi Kompresor dan Beban Pendingin</h2>
+                <p>
+                    Pengaturan suhu ruang pada tingkat wajar mencegah kompresor
+                    pendingin udara bekerja pada kapasitas maksimum, yang
+                    merupakan salah satu penyedot daya terbesar di area
+                    pemukiman.
+                </p>
+            </div>
+
+            <div class="detail-box">
+                <h2>4. Penggunaan Teknologi Inverter dan Perangkat Efisien</h2>
+                <p>
+                    Sistem bermotor modern menyesuaikan penggunaan daya sesuai
+                    beban kerja riil, bukan berjalan pada daya penuh secara
+                    terus-menerus.
+                </p>
+            </div>
+
+
+        {% elif tip.judul == "Gunakan Transportasi Ramah Lingkungan" %}
+
+            <h1>🚲 Gunakan Transportasi Ramah Lingkungan</h1>
+
+            <p class="subtitle">
+                Pilihan transportasi yang lebih ramah terhadap lingkungan.
+            </p>
+
+            <div class="detail-box">
+                <h2>1. Peralihan ke Transportasi Aktif</h2>
+                <p>
+                    Berjalan kaki atau menggunakan sepeda tidak menghasilkan
+                    emisi ekor (tailpipe emissions) sama sekali. Langkah ini
+                    menghilangkan ketergantungan pada bahan bakar fosil untuk
+                    perjalanan jarak pendek.
+                </p>
+            </div>
+
+            <div class="detail-box">
+                <h2>2. Pemanfaatan Transportasi Publik</h2>
+                <p>
+                    Transportasi massal mengangkut penumpang dalam jumlah besar
+                    sekaligus, sehingga rasio emisi per orang jauh lebih rendah
+                    dibandingkan penggunaan kendaraan pribadi tunggal.
+                </p>
+            </div>
+
+            <div class="detail-box">
+                <h2>3. Transisi ke Kendaraan Listrik Berbasis Energi Terbarukan</h2>
+                <p>
+                    Kendaraan berbasis baterai tidak mengeluarkan emisi langsung
+                    saat beroperasi. Efektivitasnya terhadap lingkungan semakin
+                    optimal jika listrik yang digunakan untuk pengisian daya
+                    berasal dari sumber energi terbarukan.
+                </p>
+            </div>
+
+            <div class="detail-box">
+                <h2>4. Penerapan Gaya Mengemudi Efisien (Eco-Driving)</h2>
+                <p>
+                    Menjaga laju kendaraan tetap stabil dan menghindari
+                    percepatan mendadak mengoptimalkan pembakaran bahan bakar,
+                    sehingga menekan volume gas buang per kilometer perjalanan.
+                </p>
+            </div>
+
+
+        {% elif tip.judul == "Kurangi Sampah" %}
+
+            <h1>♻️ Kurangi Sampah</h1>
+
+            <p class="subtitle">
+                Mengurangi sampah membantu menghemat sumber daya dan menekan emisi.
+            </p>
+
+            <div class="detail-box">
+                <h2>1. Penerapan Prinsip Pembatasan (Reduce)</h2>
+
+                <p>
+                    Menolak atau membatasi penggunaan barang sekali pakai memotong
+                    siklus produksi manufaktur. Penurunan permintaan produk baru
+                    secara otomatis mengurangi konsumsi energi dan emisi industri
+                    yang memproduksinya.
+                </p>
+            </div>
+
+
+            <div class="detail-box">
+                <h2>2. Pengolahan Sampah Organik Terpisah</h2>
+
+                <p>
+                    Mengolah sisa makanan dan sampah hayati menjadi kompos secara
+                    aerobik mencegah terjadinya pembusukan anaerobik di TPA, yang
+                    merupakan sumber utama terbentuknya gas metana.
+                </p>
+            </div>
+
+
+            <div class="detail-box">
+                <h2>3. Pemanfaatan Kembali dan Daur Ulang (Reuse & Recycle)</h2>
+
+                <p>
+                    Memakai ulang material atau mengolahnya menjadi bahan baku baru
+                    menghemat energi ekstraksi sumber daya alam cair atau tambang,
+                    sehingga menekan emisi dari rantai pasok industri global.
+                </p>
+            </div>
+
+
+        {% elif tip.judul == "Menanam Pohon" %}
+
+            <h1>🌳 Menanam Pohon</h1>
+
+            <p class="subtitle">
+                Pohon membantu menyerap karbon dan menjaga lingkungan tetap sejuk.
+            </p>
+
+            <div class="detail-box">
+                <h2>1. Sekuestrasi Karbon Melalui Fotosintesis</h2>
+
+                <p>
+                    Pohon menyerap karbon dioksida dari udara dan menggunakan energi
+                    matahari untuk mengubahnya menjadi glukosa serta oksigen (O₂).
+                    Karbon tersebut kemudian tersimpan dalam biomassa seperti batang,
+                    dahan, daun, dan akar.
+                </p>
+            </div>
+
+
+            <div class="detail-box">
+                <h2>2. Penyimpanan Karbon pada Tanah</h2>
+
+                <p>
+                    Sistem perakaran pohon membantu menstrukturkan tanah dan
+                    memperkaya kandungan bahan organik di dalamnya. Proses ini
+                    memungkinkan tanah di sekitar area vegetasi mengikat karbon
+                    dalam jangka panjang.
+                </p>
+            </div>
+
+
+            <div class="detail-box">
+                <h2>3. Efek Microclimate dan Penurunan Suhu Lingkungan</h2>
+
+                <p>
+                    Tajuk pohon memberikan naungan dan melepaskan uap air melalui
+                    proses transpirasi. Hal ini menurunkan suhu mikro di area
+                    sekitarnya, yang secara tidak langsung dapat mengurangi kebutuhan
+                    penggunaan pendingin udara di pemukiman.
+                </p>
+            </div>
+
+        {% elif tip.judul == "Hemat Air" %}
+
+            <h1>💧 Hemat Air</h1>
+
+            <p class="subtitle">
+                Menghemat air juga membantu mengurangi penggunaan energi dan emisi gas rumah kaca.
+            </p>
+
+            <div class="detail-box">
+                <h2>1. Penurunan Beban Pemompaan dan Distribusi Air</h2>
+
+                <p>
+                    Pendistribusian air bersih dari fasilitas pengolahan ke jaringan
+                    pemukiman mengandalkan pompa berdaya tinggi. Menurunkan konsumsi
+                    air secara langsung memangkas kebutuhan energi listrik untuk
+                    mengoperasikan pompa-pompa tersebut.
+                </p>
+            </div>
+
+
+            <div class="detail-box">
+                <h2>2. Pengurangan Pengolahan Air Limbah</h2>
+
+                <p>
+                    Setiap volume air yang digunakan akan menjadi air limbah yang
+                    memerlukan proses pengolahan mekanis dan kimiawi di instalasi
+                    pengolahan. Efisiensi penggunaan air memperkecil volume limbah
+                    yang harus diolah, sehingga mengurangi konsumsi energi dan emisi
+                    gas rumah kaca dari proses pengolahan air limbah.
+                </p>
+            </div>
+
+
+            <div class="detail-box">
+                <h2>3. Penghematan Energi Pemanas Air</h2>
+
+                <p>
+                    Penggunaan air hangat mengonsumsi energi, baik dari listrik maupun
+                    gas. Efisiensi penggunaan air panas secara otomatis memotong
+                    penggunaan energi yang diperlukan untuk memanaskan air tersebut.
+                </p>
+            </div>
+
+
+        {% else %}
+
+            <h1>{{ tip.judul }}</h1>
+
+            <p class="detail-text">
+                {{ tip.isi }}
+            </p>
+
+        {% endif %}
+
+
+        <a href="/" class="back-button">
+            ⬅️ Kembali ke halaman utama
+        </a>
+
+    </div>
+
+</body>
+
+</html>
